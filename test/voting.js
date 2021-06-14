@@ -65,12 +65,12 @@ contract('voting', function ([contractOwner, voter1, voter2]) {
   })
 
   it('should allow only one vote per user', async () => {
-    await subject.castVote(newCandidate.id, { from: voter1 })
-    await truffleAssert.reverts(subject.castVote(newCandidate.id, { from: voter1 }))
 
-    // await truffleAssert.reverts(
-      // subject.castVote(newCandidate.id, { from: voter1 }),
-    // )
+    await subject.castVote(newCandidate.id, { from: voter1 });
 
+    const foo = await subject.castVote(newCandidate.id, { from: voter1 });
+
+    await truffleAssert.reverts(foo);
+    
   })
 })

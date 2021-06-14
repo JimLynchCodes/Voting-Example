@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "truffle test",
-    "test:watch": "nodemon --ext 'js,sol' --exec 'truffle test --compile-all'"
+    "test:watch": "nodemon --ext 'js,sol' --exec 'truffle test'"
   },
   "repository": {
     "type": "git",
